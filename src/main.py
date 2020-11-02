@@ -4,14 +4,19 @@
 
 .. moduleauthor:: Wei-Yu
 """
+import sys
 from game import Coin
 
-i = int(input('number of times:'))
+def main(i):
+    """This is main."""
+    play_game = Coin(0.5, 12, -10)
+    lose_rate = 0.0
 
-play_game = Coin(0.5, 12, -10)
-PROFIT = 0.0
+    for j in range(int(i[1])):
+        if play_game.play()<0:
+            lose_rate=lose_rate+1
 
-for j in range(i):
-    PROFIT = PROFIT + play_game.play()
+    print('P_lose = ', lose_rate/(j+1))
 
-print('profit:', PROFIT)
+if __name__ == "__main__":
+    main(sys.argv)

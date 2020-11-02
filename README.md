@@ -7,11 +7,12 @@
 * 輸出總收益
 
 
-## 使用方式
+## 使用範例
+以進行30次為例
 ```
 $pip install -qr ./doc/requirements.txt
 
-$python ./src/main.py
+$python ./src/main.py 30
 ```
 
 ## License
